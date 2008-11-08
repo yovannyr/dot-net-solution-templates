@@ -1,0 +1,487 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>LibrariesAndTools</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>LibrariesAndTools</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="LibrariesAndTools.csproj" File="LibrariesAndTools.csproj" ReplaceParameters="true">
+      <Folder Name="Build" TargetFolderName="Build">
+        <ProjectItem ReplaceParameters="false" TargetFileName="build.bat">build.bat</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ccnet.config">ccnet.config</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="clicktobuild.bat">clicktobuild.bat</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="common.build">common.build</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="nant.build">nant.build</ProjectItem>
+      </Folder>
+      <Folder Name="Deploy" TargetFolderName="Deploy">
+        <ProjectItem ReplaceParameters="false" TargetFileName="clicktodeploylocal.bat">clicktodeploylocal.bat</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="deploy.build">deploy.build</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="deploylocal.bat">deploylocal.bat</ProjectItem>
+      </Folder>
+      <Folder Name="Documentation" TargetFolderName="Documentation">
+        <ProjectItem ReplaceParameters="true" OpenInWebBrowser="true" TargetFileName="StartPage.htm">StartPage.htm</ProjectItem> </Folder>
+      <Folder Name="libraries" TargetFolderName="libraries">
+        <Folder Name="aspnetmvc" TargetFolderName="aspnetmvc">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Microsoft.Web.Mvc.dll">Microsoft.Web.Mvc.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="System.Web.Abstractions.dll">System.Web.Abstractions.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="System.Web.Mvc.dll">System.Web.Mvc.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="System.Web.Routing.dll">System.Web.Routing.dll</ProjectItem>
+        </Folder>
+        <Folder Name="mvccontrib" TargetFolderName="mvccontrib">
+          <ProjectItem ReplaceParameters="false" TargetFileName="MvcContrib.Castle.dll">MvcContrib.Castle.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="MvcContrib.dll">MvcContrib.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="MvcContrib.StructureMap.dll">MvcContrib.StructureMap.dll</ProjectItem>
+        </Folder>
+        <Folder Name="nhibernate" TargetFolderName="nhibernate">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Bamboo.Prevalence.dll">Bamboo.Prevalence.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Bamboo.Prevalence.license.txt">Bamboo.Prevalence.license.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Bamboo.Prevalence.Util.dll">Bamboo.Prevalence.Util.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Castle.DynamicProxy.dll">Castle.DynamicProxy.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Castle.DynamicProxy.license.txt">Castle.DynamicProxy.license.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Castle.DynamicProxy.xml">Castle.DynamicProxy.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="hibernate.cfg.xml">hibernate.cfg.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="ICSharpCode.SharpZipLib.dll">ICSharpCode.SharpZipLib.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Iesi.Collections.dll">Iesi.Collections.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Iesi.Collections.license.txt">Iesi.Collections.license.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Iesi.Collections.Test.dll">Iesi.Collections.Test.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Iesi.Collections.Test.dll-results.xml">Iesi.Collections.Test.dll-results.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Iesi.Collections.xml">Iesi.Collections.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="log.txt">log.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="log4net.dll">log4net.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="log4net.license.txt">log4net.license.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="log4net.xml">log4net.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="log4net.xsd">log4net.xsd</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Lucene.Net.dll">Lucene.Net.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Lucene.Net.xml">Lucene.Net.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Memcached.ClientLibrary.dll">Memcached.ClientLibrary.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Memcached.ClientLibrary.license.txt">Memcached.ClientLibrary.license.txt</ProjectItem>
+          <Folder Name="nant" TargetFolderName="nant">
+            <ProjectItem ReplaceParameters="false" TargetFileName="log4net.dll">log4net.dll</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.Core.dll">NAnt.Core.dll</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.Core.license.txt">NAnt.Core.license.txt</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.Core.xml">NAnt.Core.xml</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nhibernate-configuration.xsd">nhibernate-configuration.xsd</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nhibernate-mapping.xsd">nhibernate-mapping.xsd</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Caches.MemCache.dll">NHibernate.Caches.MemCache.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Caches.MemCache.Tests.dll">NHibernate.Caches.MemCache.Tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.MemCache.Tests.dll.config">NHibernate.Caches.MemCache.Tests.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.MemCache.xml">NHibernate.Caches.MemCache.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Caches.Prevalence.dll">NHibernate.Caches.Prevalence.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Caches.Prevalence.Tests.dll">NHibernate.Caches.Prevalence.Tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.Prevalence.Tests.dll-results.xml">NHibernate.Caches.Prevalence.Tests.dll-results.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.Prevalence.Tests.dll.config">NHibernate.Caches.Prevalence.Tests.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.Prevalence.xml">NHibernate.Caches.Prevalence.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Caches.SysCache.dll">NHibernate.Caches.SysCache.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Caches.SysCache.Tests.dll">NHibernate.Caches.SysCache.Tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.SysCache.Tests.dll-results.xml">NHibernate.Caches.SysCache.Tests.dll-results.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.SysCache.Tests.dll.config">NHibernate.Caches.SysCache.Tests.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.SysCache.xml">NHibernate.Caches.SysCache.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Caches.SysCache2.dll">NHibernate.Caches.SysCache2.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Caches.SysCache2.xml">NHibernate.Caches.SysCache2.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.dll">NHibernate.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.DomainModel.dll">NHibernate.DomainModel.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.DomainModel.xml">NHibernate.DomainModel.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Examples.dll">NHibernate.Examples.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Examples.dll.config">NHibernate.Examples.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.JetDriver.dll">NHibernate.JetDriver.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.JetDriver.xml">NHibernate.JetDriver.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.license.txt">NHibernate.license.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Mapping.Attributes.dll">NHibernate.Mapping.Attributes.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Mapping.Attributes.Test.dll">NHibernate.Mapping.Attributes.Test.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Mapping.Attributes.Test.dll-results.xml">NHibernate.Mapping.Attributes.Test.dll-results.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Mapping.Attributes.xml">NHibernate.Mapping.Attributes.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Tasks.dll">NHibernate.Tasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Tasks.xml">NHibernate.Tasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Test.dll">NHibernate.Test.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Test.dll-results.xml">NHibernate.Test.dll-results.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Test.dll.config">NHibernate.Test.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Test.Performance.dll">NHibernate.Test.Performance.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Test.Performance.dll.config">NHibernate.Test.Performance.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Tool.hbm2net.Console.exe">NHibernate.Tool.hbm2net.Console.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Tool.hbm2net.dll">NHibernate.Tool.hbm2net.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.Tool.hbm2net.Tests.dll">NHibernate.Tool.hbm2net.Tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Tool.hbm2net.Tests.dll-results.xml">NHibernate.Tool.hbm2net.Tests.dll-results.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Tool.hbm2net.Tests.dll.config">NHibernate.Tool.hbm2net.Tests.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.Tool.hbm2net.xml">NHibernate.Tool.hbm2net.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.UserTypes.Oracle.dll">NHibernate.UserTypes.Oracle.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.UserTypes.Oracle.xml">NHibernate.UserTypes.Oracle.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.UserTypes.SqlTypes.dll">NHibernate.UserTypes.SqlTypes.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.UserTypes.SqlTypes.xml">NHibernate.UserTypes.SqlTypes.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NHibernate.UserTypes.Tests.dll">NHibernate.UserTypes.Tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.UserTypes.Tests.dll-results.xml">NHibernate.UserTypes.Tests.dll-results.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.UserTypes.Tests.dll.config">NHibernate.UserTypes.Tests.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NHibernate.xml">NHibernate.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nmock.dll">nmock.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nmock.license.txt">nmock.license.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Nullables.dll">Nullables.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Nullables.NHibernate.dll">Nullables.NHibernate.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Nullables.NHibernate.xml">Nullables.NHibernate.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Nullables.Tests.dll">Nullables.Tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Nullables.Tests.dll-results.xml">Nullables.Tests.dll-results.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Nullables.Tests.dll.config">Nullables.Tests.dll.config</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Nullables.xml">Nullables.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.dll">nunit.core.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.dll">nunit.framework.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nunit.framework.license.txt">nunit.framework.license.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NVelocity.dll">NVelocity.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NVelocity.license.txt">NVelocity.license.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="releasenotes.txt">releasenotes.txt</ProjectItem>
+        </Folder>
+        <Folder Name="nunit" TargetFolderName="nunit">
+          <ProjectItem ReplaceParameters="false" TargetFileName="clr.bat">clr.bat</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Failure.jpg">Failure.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="fit.dll">fit.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Ignored.jpg">Ignored.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="log4net.dll">log4net.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="mock-assembly.dll">mock-assembly.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nonamespace-assembly.dll">nonamespace-assembly.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="notestfixtures-assembly.dll">notestfixtures-assembly.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit-agent.exe">nunit-agent.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nunit-agent.exe.config">nunit-agent.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit-console-runner.dll">nunit-console-runner.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit-console-x86.exe">nunit-console-x86.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nunit-console-x86.exe.config">nunit-console-x86.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit-console.exe">nunit-console.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nunit-console.exe.config">nunit-console.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit-console.tests.dll">nunit-console.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit-gui-runner.dll">nunit-gui-runner.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit-gui.tests.dll">nunit-gui.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit-x86.exe">nunit-x86.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nunit-x86.exe.config">nunit-x86.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.dll">nunit.core.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.extensions.dll">nunit.core.extensions.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.interfaces.dll">nunit.core.interfaces.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.tests.dll">nunit.core.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.exe">nunit.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nunit.exe.config">nunit.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.extensions.tests.dll">nunit.extensions.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.fixtures.dll">nunit.fixtures.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.fixtures.tests.dll">nunit.fixtures.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.dll">nunit.framework.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.extensions.dll">nunit.framework.extensions.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.tests.dll">nunit.framework.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nunit.framework.xml">nunit.framework.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.mocks.dll">nunit.mocks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.mocks.tests.dll">nunit.mocks.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.uikit.dll">nunit.uikit.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.uikit.tests.dll">nunit.uikit.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.util.dll">nunit.util.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="nunit.util.tests.dll">nunit.util.tests.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NUnitFitTests.html">NUnitFitTests.html</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NUnitTests.config">NUnitTests.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NUnitTests.nunit">NUnitTests.nunit</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="runFile.exe">runFile.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="runFile.exe.config">runFile.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Success.jpg">Success.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="test-assembly.dll">test-assembly.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="test-utilities.dll">test-utilities.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="timing-tests.dll">timing-tests.dll</ProjectItem>
+        </Folder>
+        <Folder Name="rhinomocks" TargetFolderName="rhinomocks">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Rhino.Mocks.dll">Rhino.Mocks.dll</ProjectItem>
+        </Folder>
+        <Folder Name="structuremap" TargetFolderName="structuremap">
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.Core.dll">NAnt.Core.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Rhino.Mocks.dll">Rhino.Mocks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="StructureMap.AutoMocking.dll">StructureMap.AutoMocking.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="StructureMap.Client.dll">StructureMap.Client.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="StructureMap.DataAccess.dll">StructureMap.DataAccess.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="StructureMap.DeploymentTasks.dll">StructureMap.DeploymentTasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="StructureMap.dll">StructureMap.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="StructureMapDoctor.exe">StructureMapDoctor.exe</ProjectItem>
+        </Folder>
+        <Folder Name="watin" TargetFolderName="watin">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Interop.SHDocVw.dll">Interop.SHDocVw.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Microsoft.mshtml.dll">Microsoft.mshtml.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="WatiN.Core.dll">WatiN.Core.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="WatiN.Core.xml">WatiN.Core.xml</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="tools" TargetFolderName="tools">
+        <Folder Name="nant" TargetFolderName="nant">
+          <Folder Name="extensions" TargetFolderName="extensions">
+            <Folder Name="common" TargetFolderName="common">
+              <Folder Name="2.0" TargetFolderName="2.0">
+                <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.MSBuild.dll">NAnt.MSBuild.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.MSBuild.pdb">NAnt.MSBuild.pdb</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.MSBuild.xml">NAnt.MSBuild.xml</ProjectItem>
+              </Folder>
+            </Folder>
+          </Folder>
+          <Folder Name="lib" TargetFolderName="lib">
+            <Folder Name="common" TargetFolderName="common">
+              <Folder Name="neutral" TargetFolderName="neutral">
+                <ProjectItem ReplaceParameters="false" TargetFileName="ICSharpCode.SharpCvsLib.Console.dll">ICSharpCode.SharpCvsLib.Console.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="ICSharpCode.SharpCvsLib.dll">ICSharpCode.SharpCvsLib.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="ICSharpCode.SharpZipLib.dll">ICSharpCode.SharpZipLib.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NUnitCore.dll">NUnitCore.dll</ProjectItem>
+              </Folder>
+            </Folder>
+            <Folder Name="mono" TargetFolderName="mono">
+              <Folder Name="1.0" TargetFolderName="1.0">
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Core.dll">NDoc.Core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Documenter.Msdn.dll">NDoc.Documenter.Msdn.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.ExtendedUI.dll">NDoc.ExtendedUI.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.dll">nunit.core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.dll">nunit.framework.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.util.dll">nunit.util.dll</ProjectItem>
+              </Folder>
+              <Folder Name="2.0" TargetFolderName="2.0">
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Core.dll">NDoc.Core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Documenter.Msdn.dll">NDoc.Documenter.Msdn.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.ExtendedUI.dll">NDoc.ExtendedUI.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.dll">nunit.core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.dll">nunit.framework.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.util.dll">nunit.util.dll</ProjectItem>
+              </Folder>
+            </Folder>
+            <Folder Name="net" TargetFolderName="net">
+              <Folder Name="1.0" TargetFolderName="1.0">
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Core.dll">NDoc.Core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Documenter.Msdn.dll">NDoc.Documenter.Msdn.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.ExtendedUI.dll">NDoc.ExtendedUI.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.dll">nunit.core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.dll">nunit.framework.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.util.dll">nunit.util.dll</ProjectItem>
+              </Folder>
+              <Folder Name="1.1" TargetFolderName="1.1">
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Core.dll">NDoc.Core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Documenter.Msdn.dll">NDoc.Documenter.Msdn.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.ExtendedUI.dll">NDoc.ExtendedUI.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.dll">nunit.core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.dll">nunit.framework.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.util.dll">nunit.util.dll</ProjectItem>
+              </Folder>
+              <Folder Name="2.0" TargetFolderName="2.0">
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Core.dll">NDoc.Core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Documenter.Msdn.dll">NDoc.Documenter.Msdn.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.ExtendedUI.dll">NDoc.ExtendedUI.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.core.dll">nunit.core.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.framework.dll">nunit.framework.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="nunit.util.dll">nunit.util.dll</ProjectItem>
+              </Folder>
+            </Folder>
+          </Folder>
+          <ProjectItem ReplaceParameters="false" TargetFileName="log4net.dll">log4net.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Microsoft.SqlServer.ConnectionInfo.dll">Microsoft.SqlServer.ConnectionInfo.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Microsoft.SqlServer.Smo.dll">Microsoft.SqlServer.Smo.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.CompressionTasks.dll">NAnt.CompressionTasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.CompressionTasks.pdb">NAnt.CompressionTasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.CompressionTasks.xml">NAnt.CompressionTasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.Core.dll">NAnt.Core.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.Core.pdb">NAnt.Core.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.Core.xml">NAnt.Core.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.DotNetTasks.dll">NAnt.DotNetTasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.DotNetTasks.pdb">NAnt.DotNetTasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.DotNetTasks.xml">NAnt.DotNetTasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.exe">NAnt.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.exe.config">NAnt.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.MSNetTasks.dll">NAnt.MSNetTasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.MSNetTasks.pdb">NAnt.MSNetTasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.MSNetTasks.xml">NAnt.MSNetTasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.NUnit.dll">NAnt.NUnit.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.NUnit.pdb">NAnt.NUnit.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.NUnit.xml">NAnt.NUnit.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.NUnit1Tasks.dll">NAnt.NUnit1Tasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.NUnit1Tasks.pdb">NAnt.NUnit1Tasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.NUnit1Tasks.xml">NAnt.NUnit1Tasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.NUnit2Tasks.dll">NAnt.NUnit2Tasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.NUnit2Tasks.pdb">NAnt.NUnit2Tasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.NUnit2Tasks.xml">NAnt.NUnit2Tasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.pdb">NAnt.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.SourceControlTasks.dll">NAnt.SourceControlTasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.SourceControlTasks.pdb">NAnt.SourceControlTasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.SourceControlTasks.xml">NAnt.SourceControlTasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.VisualCppTasks.dll">NAnt.VisualCppTasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.VisualCppTasks.pdb">NAnt.VisualCppTasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.VisualCppTasks.xml">NAnt.VisualCppTasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.VSNetTasks.dll">NAnt.VSNetTasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.VSNetTasks.pdb">NAnt.VSNetTasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.VSNetTasks.xml">NAnt.VSNetTasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.Win32Tasks.dll">NAnt.Win32Tasks.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NAnt.Win32Tasks.pdb">NAnt.Win32Tasks.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.Win32Tasks.xml">NAnt.Win32Tasks.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NAnt.xml">NAnt.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="nant.xsd">nant.xsd</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Documenter.NAnt.dll">NDoc.Documenter.NAnt.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NDoc.Documenter.NAnt.pdb">NDoc.Documenter.NAnt.pdb</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="scvs.exe">scvs.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Tarantino.Commons.Core.dll">Tarantino.Commons.Core.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Tarantino.DatabaseManager.NAntTasks.dll">Tarantino.DatabaseManager.NAntTasks.dll</ProjectItem>
+        </Folder>
+        <Folder Name="SQL Compare 7" TargetFolderName="SQL Compare 7">
+          <ProjectItem ReplaceParameters="false" TargetFileName="ActiproSoftware.Shared.Net20.dll">ActiproSoftware.Shared.Net20.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="ActiproSoftware.UIStudio.Dock.Net20.dll">ActiproSoftware.UIStudio.Dock.Net20.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="ActiproSoftware.WinUICore.Net20.dll">ActiproSoftware.WinUICore.Net20.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="ActiproSoftware.Wizard.Net20.dll">ActiproSoftware.Wizard.Net20.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="DevExpress.Data.v7.2.dll">DevExpress.Data.v7.2.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="DevExpress.Utils.v7.2.dll">DevExpress.Utils.v7.2.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="DevExpress.XtraBars.v7.2.dll">DevExpress.XtraBars.v7.2.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="DevExpress.XtraEditors.v7.2.dll">DevExpress.XtraEditors.v7.2.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="DevExpress.XtraGrid.v7.2.dll">DevExpress.XtraGrid.v7.2.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="DevExpress.XtraPrinting.v7.2.dll">DevExpress.XtraPrinting.v7.2.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.BackupReader.CryptoHelper.dll">RedGate.BackupReader.CryptoHelper.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.BackupReader.dll">RedGate.BackupReader.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.BackupReader.SqbReader.dll">RedGate.BackupReader.SqbReader.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.Licensing.Client.dll">RedGate.Licensing.Client.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.Shared.Controls.dll">RedGate.Shared.Controls.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.Shared.Controls.SQL.dll">RedGate.Shared.Controls.SQL.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.Shared.SQL.dll">RedGate.Shared.SQL.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RedGate.Shared.SQL.xml">RedGate.Shared.SQL.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.Shared.Utils.dll">RedGate.Shared.Utils.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RedGate.Shared.Utils.xml">RedGate.Shared.Utils.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SqlChangeset.Common.dll">RedGate.SqlChangeset.Common.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SQLCompare.ASTParser.dll">RedGate.SQLCompare.ASTParser.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SQLCompare.CommandLine.dll">RedGate.SQLCompare.CommandLine.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SQLCompare.Distribution.dll">RedGate.SQLCompare.Distribution.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SQLCompare.Distribution.mod">RedGate.SQLCompare.Distribution.mod</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SQLCompare.Engine.dll">RedGate.SQLCompare.Engine.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RedGate.SQLCompare.Engine.xml">RedGate.SQLCompare.Engine.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SQLCompare.Rewriter.dll">RedGate.SQLCompare.Rewriter.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SQLCompare.UI.exe">RedGate.SQLCompare.UI.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RedGate.SQLCompare.UI.exe.config">RedGate.SQLCompare.UI.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SQLCompare.UI.exe.manifest">RedGate.SQLCompare.UI.exe.manifest</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.Update.Client.dll">RedGate.Update.Client.dll</ProjectItem>
+          <Folder Name="Reporting" TargetFolderName="Reporting">
+            <Folder Name="images" TargetFolderName="images">
+              <ProjectItem ReplaceParameters="false" TargetFileName="Assemblies.gif">Assemblies.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="AsymmetricKeys.gif">AsymmetricKeys.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="bwgradient.gif">bwgradient.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Certificates.gif">Certificates.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Contract32.gif">Contract32.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Contracts.gif">Contracts.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="DdlTriggers.gif">DdlTriggers.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Defaults.gif">Defaults.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="drop.gif">drop.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Equals.gif">Equals.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="EventNotifications.gif">EventNotifications.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Expand32.gif">Expand32.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="FullTextCatalogs.gif">FullTextCatalogs.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Indexes.gif">Indexes.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="LeftArrow16.gif">LeftArrow16.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="LeftArrow48.gif">LeftArrow48.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="LeftArrow48.png">LeftArrow48.png</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="LeftDatabase32.gif">LeftDatabase32.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="MessageTypes.gif">MessageTypes.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="NotEquals16.gif">NotEquals16.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="PartitionFunctions.gif">PartitionFunctions.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="PartitionSchemes.gif">PartitionSchemes.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Queues.gif">Queues.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="RightArrow16.gif">RightArrow16.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="RightArrow16.png">RightArrow16.png</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="RightArrow48.gif">RightArrow48.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="RightDatabase32.gif">RightDatabase32.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Roles.gif">Roles.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Routes.gif">Routes.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Rules.gif">Rules.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Schemas.gif">Schemas.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="ServiceBindings.gif">ServiceBindings.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Services.gif">Services.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="StoredProcedures.gif">StoredProcedures.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="SymmetricKeys.gif">SymmetricKeys.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Synonyms.gif">Synonyms.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="tables.gif">tables.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="UserDefinedFunctions.gif">UserDefinedFunctions.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="UserDefinedTypes.gif">UserDefinedTypes.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Users.gif">Users.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="Views.gif">Views.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="wbgrad.gif">wbgrad.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="wggrad.gif">wggrad.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="wggradient.gif">wggradient.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="wpgradient.gif">wpgradient.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="wrgradient.gif">wrgradient.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="XmlSchemaCollections.gif">XmlSchemaCollections.gif</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="YukonDefault.gif">YukonDefault.gif</ProjectItem>
+            </Folder>
+          </Folder>
+          <Folder Name="SQL Changeset" TargetFolderName="SQL Changeset">
+            <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SqlChangeset.Common.dll">RedGate.SqlChangeset.Common.dll</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SqlChangeset.exe">RedGate.SqlChangeset.exe</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SqlChangeset.Shared.dll">RedGate.SqlChangeset.Shared.dll</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="RedGate.SqlChangeset.SharedUi.dll">RedGate.SqlChangeset.SharedUi.dll</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="false" TargetFileName="SQLCompare.exe">SQLCompare.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SQLCompare.exe.config">SQLCompare.exe.config</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SQLCompareExcel.xsl">SQLCompareExcel.xsl</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SQLCompareInteractiveReportTemplate.xsl">SQLCompareInteractiveReportTemplate.xsl</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SQLCompareSimpleHTMLReport.xsl">SQLCompareSimpleHTMLReport.xsl</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="System.Data.SQLite.DLL">System.Data.SQLite.DLL</ProjectItem>
+          <Folder Name="x64" TargetFolderName="x64">
+            <ProjectItem ReplaceParameters="false" TargetFileName="System.Data.SQLite.DLL">System.Data.SQLite.DLL</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="false" TargetFileName="zlib1.dll">zlib1.dll</ProjectItem>
+        </Folder>
+        <Folder Name="subversion" TargetFolderName="subversion">
+          <ProjectItem ReplaceParameters="false" TargetFileName="intl3_svn.dll">intl3_svn.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libapr-1.dll">libapr-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libapr.dll">libapr.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libapriconv-1.dll">libapriconv-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libapriconv.dll">libapriconv.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libaprutil-1.dll">libaprutil-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libaprutil.dll">libaprutil.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libdb41.dll">libdb41.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libdb44.dll">libdb44.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libeay32.dll">libeay32.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libhttpd.dll">libhttpd.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsasl.dll">libsasl.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvn_client-1.dll">libsvn_client-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvn_delta-1.dll">libsvn_delta-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvn_diff-1.dll">libsvn_diff-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvn_fs-1.dll">libsvn_fs-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvn_ra-1.dll">libsvn_ra-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvn_repos-1.dll">libsvn_repos-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvn_subr-1.dll">libsvn_subr-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvn_wc-1.dll">libsvn_wc-1.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="libsvnjavahl-1.dll">libsvnjavahl-1.dll</ProjectItem>
+          <Folder Name="license" TargetFolderName="license">
+            <ProjectItem ReplaceParameters="false" TargetFileName="APR_and_Serf.license">APR_and_Serf.license</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="CyrusSASL.license">CyrusSASL.license</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="Neon.license">Neon.license</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="OpenSSL.license">OpenSSL.license</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="Subversion.license">Subversion.license</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="false" TargetFileName="openssl.exe">openssl.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="saslANONYMOUS.dll">saslANONYMOUS.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="saslCRAMMD5.dll">saslCRAMMD5.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sasldblistusers2.exe">sasldblistusers2.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="saslDIGESTMD5.dll">saslDIGESTMD5.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="saslNTLM.dll">saslNTLM.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="saslpasswd2.exe">saslpasswd2.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="saslSASLDB.dll">saslSASLDB.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="ssleay32.dll">ssleay32.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="ssleay32.dll.tmp">ssleay32.dll.tmp</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="svn-populate-node-origins-index.exe">svn-populate-node-origins-index.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="svn.exe">svn.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="svnadmin.exe">svnadmin.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="svndumpfilter.exe">svndumpfilter.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="svnlook.exe">svnlook.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="svnserve.exe">svnserve.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="svnsync.exe">svnsync.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="svnversion.exe">svnversion.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="uninst.exe">uninst.exe</ProjectItem>
+        </Folder>
+        <Folder Name="tools" TargetFolderName="tools">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Dbgview.exe">Dbgview.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Filemon.exe">Filemon.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="procexp.exe">procexp.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Regmon.exe">Regmon.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Tail.exe">Tail.exe</ProjectItem>
+        </Folder>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>LOBTemplateWizard, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2279e39cfc7c91b2</Assembly>
+    <FullClassName>LOBTemplateWizard.SolutionWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXTERNAL_PROPERTIES: usdDatabaseVersion--> 
+<!--EXTERNAL_PROPERTIES: CCNetLabel-->
+<project name="$safesolutionname$" xmlns="http://nant.sf.net/schemas/nant.xsd">
+	<include buildfile="common.build"/>
+	<property name="nant.settings.currentframework" value="net-3.5" />
+	<property name="company.name" value=""/>
+
+	<!-- Version settings -->
+	<property name="svn.executable" value="LibrariesAndTools/tools/subversion/svn.exe" dynamic="true" if="${not property::exists('svn.executable')}" />
+	<property name="revisionnumber" value="9999" dynamic="true"/>
+	<property name="project.fullversion" value="1.0.${revisionnumber}.0" dynamic="true"/>
+	<property name="project.config" value="release"/>
+
+	<!-- Folder references -->
+	<property name="dir.solution" value="src"/>
+	<property name="dir.build" value="build" dynamic="true"/>
+	<property name="dir.test" value="${dir.build}\${nant.settings.currentframework}-${project.config}"/>
+	<property name="dir.package" value="${dir.build}/package"/>
+	<property name="dir.results" value="${dir.build}/results"/>
+	<property name="dir.installerpackage" value="latestVersion" />
+
+	<!-- Compilation settings -->
+	<property name="file.solution" value="${dir.solution}/${project::get-name()}.sln"/>
+
+	<!-- Database migration settings -->
+	<property name="database.script.directory" value="${dir.solution}/Infrastructure/Database" />
+	<property name="database.server" value="localhost\sqlexpress" overwrite="false"/>
+	<property name="database.name" value="${project::get-name()}" overwrite="false"/>
+	<property name="database.integrated" value="true" overwrite="false" />
+<!--	<property name="database.username" value="dbuser" overwrite="false"/>-->
+<!--	<property name="database.password" value="P@ssword1" overwrite="false"/>-->
+
+	<!-- Testing settings -->
+	<property name="assembly.unittests" value="$safesolutionname$.UnitTests.dll"/>
+	<property name="assembly.integrationtests" value="$safesolutionname$.IntegrationTests.dll"/>
+
+	<!-- Common targets -->
+  <target name="db-migration" depends="create-database-migration"/>
+	<target name="build" depends="version, init, commonassemblyinfo, 
+			compile,asp-compile,dropDatabase, createDatabase, move-for-test, test"/>
+	<target name="build-and-package" depends="build, package"/>
+	<target name="cruise" depends="revert, build-and-package"/>
+  <script  language="C#" prefix="migration" >
+    <references>
+      <include name="System.Data.dll" />
+      <include name="LibrariesAndTools\libraries\nhibernate\NHibernate.dll" />
+      <include name="System.Xml.dll" />
+      <include name="System.IO.dll" />
+      <include name="System.Reflection.dll" />
+      <include name="System.dll" />
+    </references>
+    <imports>
+      <import namespace="NHibernate.Cfg"/>
+      <import namespace="NHibernate.Tool.hbm2ddl"/>
+      <import namespace="System.Reflection"/>
+      <import namespace="System.IO"/>
+      <import namespace="System.Data.SqlClient" />
+    </imports>
+    <code>
+      <![CDATA[
+              [Function("build-database-from-nhibernate")]
+              public static string BuildDatabse(string server,string databasename,string mappingAssembly  ) {
+
+              CreateDatabase(server,databasename);
+              
+              path = Path.GetFullPath(Path.GetDirectoryName(mappingAssembly))+"\\";
+              
+              AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(ResolveAssembliesToBuildLocation);
+    
+            IDictionary props = new Hashtable();
+            props.Add("hibernate.dialect","NHibernate.Dialect.MsSql2005Dialect");
+            props.Add("hibernate.connection.driver_class","NHibernate.Driver.SqlClientDriver");
+            props.Add("hibernate.connection.connection_string",@"Data Source="+server+";Initial Catalog="+databasename+";Integrated Security=true");
+
+            Configuration cfg = new Configuration()
+            .SetProperties(props)
+            .AddAssembly( System.Reflection.Assembly.LoadFrom( mappingAssembly  ));
+            
+
+             new SchemaExport(cfg).Execute(true, true, false, true);
+              AppDomain.CurrentDomain.AssemblyResolve -= new ResolveEventHandler(ResolveAssembliesToBuildLocation);
+              return "export complete";
+              }
+              
+              public static string path="";
+
+              static Assembly ResolveAssembliesToBuildLocation(object sender, ResolveEventArgs args) {
+                Console.WriteLine("Resolving..." + args.Name );
+              return Assembly.LoadFrom(path + args.Name + ".dll");
+              }
+
+
+               public static void CreateDatabase(string server,string databasename) {
+                  string connectionString = @"Data Source="+server+";Integrated Security=true";
+                  
+                  SqlConnection connection = new SqlConnection(connectionString);
+                  string createDbQuery = string.Format("IF  EXISTS (SELECT name FROM sys.databases WHERE name = N'{0}') DROP DATABASE {0} ; CREATE DATABASE {0} ;" , databasename);
+                  SqlCommand createDatabaseCommand = new SqlCommand(createDbQuery);
+                  createDatabaseCommand.Connection = connection;
+                  
+                  connection.Open();
+                  
+                  try {
+                      createDatabaseCommand.ExecuteNonQuery();
+                      Console.WriteLine("Database added successfully: " + databasename);
+                  } catch (Exception e) {
+                      Console.WriteLine( e.ToString());
+                  } finally {
+                      connection.Close();
+                  }
+              }
+
+            ]]>
+    </code>
+
+  </script>
+  <script language="C#" prefix="migration" >
+    <references>
+      <include name="System.IO.dll" />
+    </references>
+    <code>
+      <![CDATA[
+              [Function("next-migration-number")]
+              public static string NextMigration(string path  ) {
+                  
+                  string[] files = System.IO.Directory.GetFiles(path);
+                  string filename = System.IO.Path.GetFileName(files[files.Length-1]);
+                  int count=1;
+                  try
+                  {
+                      count = Convert.ToInt32(filename.Substring(0, 4));
+                      count++;
+                  }
+                  catch
+                  {
+                      
+                  }
+                  return string.Format("{0:0000}", count);
+              }
+            ]]>
+    </code>
+  </script>
+
+  <target name="create-database-migration">
+  
+    <property name="migrationScriptName" value="${migration::next-migration-number(database.script.directory+'/Update')}_AutoGeneratedMigration"/>
+    <echo message="${migration::build-database-from-nhibernate(database.server,database.name+'_future',dir.test+'\Headspring.Training.Infrastructure.dll')}"/>
+
+    <manageSqlDatabase
+        scriptDirectory="${database.script.directory}"
+        action="Drop"
+        server="${database.server}"
+        integratedAuthentication="true"
+        database="${database.name}_current"
+        failonerror="false"
+		/>
+    <manageSqlDatabase
+        scriptDirectory="${database.script.directory}"
+        action="Create"
+        server="${database.server}"
+        integratedAuthentication="true"
+        database="${database.name}_current"
+        failonerror="false"
+		/>
+    <exec
+      program="lib\SQL Compare 7\SQLCompare.exe" 
+      commandline="/f /v /server1:${database.server} /server2:${database.server} /database1:${database.name}_future /database2:${database.name}_current /scriptfile:${database.script.directory}/Update/${migrationScriptName}.sql /o:ii,ik /exclude:Table:usd_AppliedDatabaseScript"
+      failonerror="false  "
+      />
+  </target>
+  
+  
+	<!-- Targets -->
+	<target name="version">
+		<if test="${property::exists('CCNetLabel')}">
+			<property name="project.revision" value="${CCNetLabel}"/>
+		</if>
+	</target>
+
+  <target name="asp-compile">
+    <exec basedir="."
+              program="${framework::get-tool-path('aspnet_compiler.exe')}"
+              commandline="-nologo -v / -p ${dir.solution}\$safesolutionname$.ui"
+              workingdir="."
+              failonerror="true"
+            />
+
+  </target>
+	<target name="move-for-test">
+		<copy todir="${dir.test}" flatten="true">
+			<fileset basedir="${dir.solution}">
+				<include name="/**/bin/${project.config}/**" />
+				<include name="/**/UI/bin/**" />
+				<include name="*.config"/>
+				<include name="*.cfg.xml"/>
+			</fileset>
+		</copy>
+
+		<!--		<xmlpoke file="${dir.test}/hibernate.cfg.xml"-->
+		<!--		 xpath="//*/hbm:property[@name='connection.connection_string']"-->
+		<!--				 value="Data Source=${database.server};Initial Catalog=${database.name};User ID=${database.username};Password=${database.password}">-->
+		<!--			<namespaces>-->
+		<!--				<namespace prefix="hbm" uri="urn:nhibernate-configuration-2.2" />-->
+		<!--			</namespaces>-->
+		<!--		</xmlpoke>-->
+	</target>
+	
+	<target name="test">
+		<delete dir="${dir.results}" if="${directory::exists('${results.dir}')}" />
+		<mkdir dir="${dir.results}"/>
+
+		<nunit2 failonerror="true" verbose="true">
+			<formatter type="Xml" outputdir="${dir.results}" usefile="true" extension=".xml"/>
+			<formatter type="Plain" />
+			<test assemblyname="${dir.test}/${assembly.unittests}"/>
+		</nunit2>
+
+		<nunit2 failonerror="true" verbose="true">
+			<formatter type="Xml" outputdir="${dir.results}" usefile="true" extension=".xml"/>
+			<formatter type="Plain" />
+			<test assemblyname="${dir.test}/${assembly.integrationtests}">
+				<categories>
+					<exclude name="DataLoader"/>
+				</categories>
+			</test>
+		</nunit2>
+
+		<nunit2 failonerror="true" verbose="true">
+			<formatter type="Xml" outputdir="${dir.results}" usefile="true" extension=".xml"/>
+			<formatter type="Plain" />
+			<test assemblyname="${dir.test}/${assembly.integrationtests}">
+				<categories>
+					<include name="DataLoader"/>
+					<exclude name="*"/>
+				</categories>
+			</test>
+		</nunit2>
+	</target>
+	
+
+	<target name="package">
+		<copy todir="${dir.package}\website" includeemptydirs="false">
+			<fileset basedir="${dir.solution}\ui">
+				<exclude name="**\*.cs*"/>
+				<include  name="**\**"/>
+			</fileset>
+		</copy>
+		<copy todir="${dir.package}\database" includeemptydirs="false">
+			<fileset basedir="${database.script.directory}">
+				<include name="**/*.sql" />
+			</fileset>
+		</copy>
+		<copy todir="${dir.package}\nant" includeemptydirs="false">
+			<fileset basedir="${nant::get-base-directory()}">
+				<include name="**" />
+			</fileset>
+		</copy>
+		<copy file="nant.build" todir="${dir.package}"/>
+		<copy todir="${dir.package}">
+			<fileset basedir="config\">
+				<include name="**" />
+			</fileset>
+		</copy>
+
+		<xmlpoke
+			file="${dir.package}\website\Web.config"
+			xpath="/configuration/system.web/trace/@enabled"
+			value="false" />
+
+		<delete file="${dir.package}/${project::get-name()}Package.zip" />
+		<zip zipfile="${dir.package}/${project::get-name()}Package.zip">
+			<fileset basedir="${dir.package}">
+				<include name="**" />
+			</fileset>
+		</zip>
+	</target>
+
+  <target name="executedeploy">
+    <exec program="deploylocal.bat" basedir="${dir.package}"
+			  workingdir="${dir.package}" />
+  </target>
+</project>
