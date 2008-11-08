@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="BuildTemplates" xmlns="http://nant.sf.net/schemas/nant.xsd">
+  <property name="nant.settings.currentframework" value="net-3.5" />
+    <target name="SetProjectProperties">
+      <property name="node" value="&lt;ProjectItem ReplaceParameters='true' OpenInWebBrowser='true' TargetFileName='StartPage.htm'&gt;StartPage.htm&lt;/ProjectItem&gt; " />
+      <xmlpoke
+        file="${template.path}"
+        xpath="/ns:VSTemplate/ns:TemplateContent/ns:Project[@TargetFileName = 'LibrariesAndTools.csproj' ]/ns:Folder[@Name = 'Documentation']"
+        value="${node}" >
+        <namespaces>
+          <namespace prefix="ns" uri="http://schemas.microsoft.com/developer/vstemplate/2005" />
+        </namespaces>
+      </xmlpoke>
+    </target>
+</project>
+<!-- @OpenInHelpBrowser -->

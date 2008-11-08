@@ -1,0 +1,38 @@
+<VSTemplate Version="2.0.0"
+  xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+  Type="ProjectGroup">
+  <TemplateData>
+    <Name>LineOfBusinessWebApplication</Name>
+    <Description>Creats a Line of Business Web Application. This uses a well known Alt.Net Application Stack</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Line of Business</ProjectSubType>
+    <SortOrder>1</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <BuildOnLoad>true</BuildOnLoad>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink  ProjectName="LibrariesAndTools">
+        LibrariesAndTools\MyTemplate.vstemplate
+      </ProjectTemplateLink>
+	    <SolutionFolder Name="src">
+      		<ProjectTemplateLink ProjectName="$safesolutionname$.UI">
+        		UI\MyTemplate.vstemplate
+		      </ProjectTemplateLink>
+      		<ProjectTemplateLink ProjectName="$safesolutionname$.UnitTests">
+        		UnitTest\MyTemplate.vstemplate
+      		</ProjectTemplateLink>
+      		<ProjectTemplateLink ProjectName="$safesolutionname$.IntegrationTests">
+        		UnitTest\MyTemplate.vstemplate
+      		</ProjectTemplateLink>
+	</SolutionFolder> 
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>LOBTemplateWizard, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2279e39cfc7c91b2</Assembly>
+    <FullClassName>LOBTemplateWizard.SolutionWizard</FullClassName>
+  </WizardExtension>  
+</VSTemplate>

@@ -1,0 +1,151 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer>
+      <setting name="UsedSolutionBuilderID">0</setting>
+    </integer>
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">False</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="true" priority="3" />
+      <Item value="return" priority="9" />
+      <Item value="contentItems" priority="1" />
+      <Item value="site" priority="4" />
+      <Item value="contentItem" priority="7" />
+      <Item value="null" priority="2" />
+      <Item value="if" priority="2" />
+      <Item value="foreach" priority="0" />
+      <Item value="ContentInstallerContentTypeRestriction" priority="0" />
+      <Item value="ContentInstallerSupportedFileSecurity" priority="0" />
+      <Item value="_site" priority="3" />
+      <Item value="i" priority="1" />
+      <Item value="combinedDirectory" priority="0" />
+      <Item value="DuplicateFileCase" priority="2" />
+      <Item value="applicationHost" priority="0" />
+      <Item value="Path" priority="1" />
+      <Item value="StringSplitOptions" priority="0" />
+      <Item value="string" priority="2" />
+      <Item value="vsApplicationDirectory" priority="0" />
+      <Item value="public" priority="1" />
+      <Item value="void" priority="0" />
+      <Item value="new" priority="9" />
+      <Item value="var" priority="2" />
+      <Item value="ContentInstaller" priority="1" />
+      <Item value="installer" priority="1" />
+      <Item value="result" priority="2" />
+      <Item value="Rhino" priority="2" />
+      <Item value="Mocks" priority="1" />
+      <Item value="MockRepository" priority="2" />
+      <Item value="content" priority="0" />
+      <Item value="RhinoMocks" priority="0" />
+      <Item value="IContentItem" priority="2" />
+      <Item value="ContentItemStub" priority="1" />
+      <Item value="FileContentType" priority="0" />
+      <Item value="Assert" priority="0" />
+      <Item value="ContentVersion" priority="0" />
+      <Item value="IContentInstallerSite" priority="0" />
+      <Item value="s" priority="2" />
+      <Item value="object" priority="1" />
+      <Item value="IApplicationHostData" priority="0" />
+      <Item value="Action&lt;IMethodOptions&lt;object&gt;&gt;" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.VisualStudio.ContentInstaller.IContentItem">
+      <Item value="FileContentType" priority="2" />
+      <Item value="GetFileNames" priority="0" />
+      <Item value="DisplayName" priority="0" />
+      <Item value="ContentVersion" priority="0" />
+      <Item value="ShouldInstall" priority="0" />
+      <Item value="InstallMessage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.VisualStudio.ContentInstaller.IContentInstallerSite">
+      <Item value="StatusMessage" priority="0" />
+      <Item value="CopyFile" priority="1" />
+      <Item value="GetApplicationData" priority="1" />
+      <Item value="Stub" priority="0" />
+      <Item value="AssertWasCalled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.ContentInstaller.DuplicateFileCase">
+      <Item value="EnableOverwrite" priority="1" />
+      <Item value="EnableSkip" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.VisualStudio.ContentInstaller.IApplicationHostData">
+      <Item value="ApplicationPath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetDirectoryName" priority="0" />
+      <Item value="Combine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WizardExtension.ContentInstaller">
+      <Item value="GetImportPages" priority="1" />
+      <Item value="AddContentItem" priority="0" />
+      <Item value="SupportsImportUI" priority="0" />
+      <Item value="UpdateContentItemInstallStatus" priority="0" />
+      <Item value="Import" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Rhino.Mocks.MockRepository">
+      <Item value="GenerateStub" priority="1" />
+      <Item value="GenerateMock" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Boolean">
+      <Item value="ShouldBeFalse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="ShouldEqual" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Rhino.Mocks.Interfaces.IMethodOptions`1">
+      <Item value="Callback" priority="0" />
+      <Item value="OutRef" priority="0" />
+      <Item value="Return" priority="0" />
+      <Item value="IgnoreArguments" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="97437744-AAF1-4136-9CD8-B7A827841FEA/d:Properties/f:AssemblyInfo.cs" caret="1425" scrollPosition="0|1" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/d:Stub/f:HostDataStub.cs" caret="628" scrollPosition="0|0" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/d:Stub/f:ContentItemStub.cs" caret="1178" scrollPosition="0|17" />
+      <File id="97437744-AAF1-4136-9CD8-B7A827841FEA/f:ContentInstaller.cs" caret="249" scrollPosition="0|0" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="224" scrollPosition="0|0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="97437744-AAF1-4136-9CD8-B7A827841FEA/f:ContentInstaller.cs" caret="1951" scrollPosition="0|31" />
+      <File id="97437744-AAF1-4136-9CD8-B7A827841FEA/f:ContentInstaller.cs" caret="1063" scrollPosition="0|16" />
+      <File id="97437744-AAF1-4136-9CD8-B7A827841FEA/f:ContentInstaller.cs" caret="2370" scrollPosition="0|16" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="0" scrollPosition="0|0" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|0" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|22" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="37|1" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="14|28" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|61" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|19" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|22" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/d:Stub/f:ContentItemStub.cs" caret="891" scrollPosition="0|18" />
+      <File id="97437744-AAF1-4136-9CD8-B7A827841FEA/f:ContentInstaller.cs" caret="388" scrollPosition="0|6" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|43" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|86" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|64" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/d:Stub/f:HostDataStub.cs" caret="130" scrollPosition="0|0" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/d:Stub/f:HostDataStub.cs" caret="628" scrollPosition="0|0" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/d:Stub/f:ContentItemStub.cs" caret="421" scrollPosition="0|2" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/d:Stub/f:ContentItemStub.cs" caret="297" scrollPosition="0|2" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/d:Stub/f:ContentItemStub.cs" caret="757" scrollPosition="0|17" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="2821" scrollPosition="0|44" />
+      <File id="7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78/f:ContentInstallerSpecs.cs" caret="281" scrollPosition="0|38" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>True</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <EnableUnitTesting>True</EnableUnitTesting>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>

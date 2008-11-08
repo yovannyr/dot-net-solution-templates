@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D456D83-F9CB-4B5F-BA86-5E9FC556D754}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>$safeprojectname$</RootNamespace>
+    <AssemblyName>$safeprojectname$</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Content Include="Documentation\StartPage.htm" />
+    <Content Include="libraries\aspnetmvc\Microsoft.Web.Mvc.dll" />
+    <Content Include="libraries\aspnetmvc\System.Web.Abstractions.dll" />
+    <Content Include="libraries\aspnetmvc\System.Web.Mvc.dll" />
+    <Content Include="libraries\aspnetmvc\System.Web.Routing.dll" />
+    <Content Include="libraries\mvccontrib\MvcContrib.Castle.dll" />
+    <Content Include="libraries\mvccontrib\MvcContrib.dll" />
+    <Content Include="libraries\mvccontrib\MvcContrib.StructureMap.dll" />
+    <Content Include="tools\nant\extensions\common\2.0\NAnt.MSBuild.dll" />
+    <Content Include="tools\nant\extensions\common\2.0\NAnt.MSBuild.pdb" />
+    <Content Include="tools\nant\extensions\common\2.0\NAnt.MSBuild.xml" />
+    <Content Include="tools\nant\lib\common\neutral\ICSharpCode.SharpCvsLib.Console.dll" />
+    <Content Include="tools\nant\lib\common\neutral\ICSharpCode.SharpCvsLib.dll" />
+    <Content Include="tools\nant\lib\common\neutral\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="tools\nant\lib\common\neutral\NUnitCore.dll" />
+    <Content Include="tools\nant\lib\mono\1.0\NDoc.Core.dll" />
+    <Content Include="tools\nant\lib\mono\1.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="tools\nant\lib\mono\1.0\NDoc.ExtendedUI.dll" />
+    <Content Include="tools\nant\lib\mono\1.0\nunit.core.dll" />
+    <Content Include="tools\nant\lib\mono\1.0\nunit.framework.dll" />
+    <Content Include="tools\nant\lib\mono\1.0\nunit.util.dll" />
+    <Content Include="tools\nant\lib\mono\2.0\NDoc.Core.dll" />
+    <Content Include="tools\nant\lib\mono\2.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="tools\nant\lib\mono\2.0\NDoc.ExtendedUI.dll" />
+    <Content Include="tools\nant\lib\mono\2.0\nunit.core.dll" />
+    <Content Include="tools\nant\lib\mono\2.0\nunit.framework.dll" />
+    <Content Include="tools\nant\lib\mono\2.0\nunit.util.dll" />
+    <Content Include="tools\nant\lib\net\1.0\NDoc.Core.dll" />
+    <Content Include="tools\nant\lib\net\1.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="tools\nant\lib\net\1.0\NDoc.ExtendedUI.dll" />
+    <Content Include="tools\nant\lib\net\1.0\nunit.core.dll" />
+    <Content Include="tools\nant\lib\net\1.0\nunit.framework.dll" />
+    <Content Include="tools\nant\lib\net\1.0\nunit.util.dll" />
+    <Content Include="tools\nant\lib\net\1.1\NDoc.Core.dll" />
+    <Content Include="tools\nant\lib\net\1.1\NDoc.Documenter.Msdn.dll" />
+    <Content Include="tools\nant\lib\net\1.1\NDoc.ExtendedUI.dll" />
+    <Content Include="tools\nant\lib\net\1.1\nunit.core.dll" />
+    <Content Include="tools\nant\lib\net\1.1\nunit.framework.dll" />
+    <Content Include="tools\nant\lib\net\1.1\nunit.util.dll" />
+    <Content Include="tools\nant\lib\net\2.0\NDoc.Core.dll" />
+    <Content Include="tools\nant\lib\net\2.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="tools\nant\lib\net\2.0\NDoc.ExtendedUI.dll" />
+    <Content Include="tools\nant\lib\net\2.0\nunit.core.dll" />
+    <Content Include="tools\nant\lib\net\2.0\nunit.framework.dll" />
+    <Content Include="tools\nant\lib\net\2.0\nunit.util.dll" />
+    <Content Include="tools\nant\log4net.dll" />
+    <Content Include="tools\nant\Microsoft.SqlServer.ConnectionInfo.dll" />
+    <Content Include="tools\nant\Microsoft.SqlServer.Smo.dll" />
+    <Content Include="tools\nant\NAnt.CompressionTasks.dll" />
+    <Content Include="tools\nant\NAnt.CompressionTasks.pdb" />
+    <Content Include="tools\nant\NAnt.CompressionTasks.xml" />
+    <Content Include="tools\nant\NAnt.Core.dll" />
+    <Content Include="tools\nant\NAnt.Core.pdb" />
+    <Content Include="tools\nant\NAnt.Core.xml" />
+    <Content Include="tools\nant\NAnt.DotNetTasks.dll" />
+    <Content Include="tools\nant\NAnt.DotNetTasks.pdb" />
+    <Content Include="tools\nant\NAnt.DotNetTasks.xml" />
+    <Content Include="tools\nant\NAnt.exe" />
+    <Content Include="tools\nant\NAnt.MSNetTasks.dll" />
+    <Content Include="tools\nant\NAnt.MSNetTasks.pdb" />
+    <Content Include="tools\nant\NAnt.MSNetTasks.xml" />
+    <Content Include="tools\nant\NAnt.NUnit.dll" />
+    <Content Include="tools\nant\NAnt.NUnit.pdb" />
+    <Content Include="tools\nant\NAnt.NUnit.xml" />
+    <Content Include="tools\nant\NAnt.NUnit1Tasks.dll" />
+    <Content Include="tools\nant\NAnt.NUnit1Tasks.pdb" />
+    <Content Include="tools\nant\NAnt.NUnit1Tasks.xml" />
+    <Content Include="tools\nant\NAnt.NUnit2Tasks.dll" />
+    <Content Include="tools\nant\NAnt.NUnit2Tasks.pdb" />
+    <Content Include="tools\nant\NAnt.NUnit2Tasks.xml" />
+    <Content Include="tools\nant\NAnt.pdb" />
+    <Content Include="tools\nant\NAnt.SourceControlTasks.dll" />
+    <Content Include="tools\nant\NAnt.SourceControlTasks.pdb" />
+    <Content Include="tools\nant\NAnt.SourceControlTasks.xml" />
+    <Content Include="tools\nant\NAnt.VisualCppTasks.dll" />
+    <Content Include="tools\nant\NAnt.VisualCppTasks.pdb" />
+    <Content Include="tools\nant\NAnt.VisualCppTasks.xml" />
+    <Content Include="tools\nant\NAnt.VSNetTasks.dll" />
+    <Content Include="tools\nant\NAnt.VSNetTasks.pdb" />
+    <Content Include="tools\nant\NAnt.VSNetTasks.xml" />
+    <Content Include="tools\nant\NAnt.Win32Tasks.dll" />
+    <Content Include="tools\nant\NAnt.Win32Tasks.pdb" />
+    <Content Include="tools\nant\NAnt.Win32Tasks.xml" />
+    <Content Include="tools\nant\NAnt.xml" />
+    <Content Include="tools\nant\NDoc.Documenter.NAnt.dll" />
+    <Content Include="tools\nant\NDoc.Documenter.NAnt.pdb" />
+    <Content Include="tools\nant\scvs.exe" />
+    <Content Include="tools\nant\Tarantino.Commons.Core.dll" />
+    <Content Include="tools\nant\Tarantino.DatabaseManager.NAntTasks.dll" />
+    <Content Include="libraries\nhibernate\Bamboo.Prevalence.dll" />
+    <Content Include="libraries\nhibernate\Bamboo.Prevalence.license.txt" />
+    <Content Include="libraries\nhibernate\Bamboo.Prevalence.Util.dll" />
+    <Content Include="libraries\nhibernate\Castle.DynamicProxy.dll" />
+    <Content Include="libraries\nhibernate\Castle.DynamicProxy.license.txt" />
+    <Content Include="libraries\nhibernate\Castle.DynamicProxy.xml" />
+    <Content Include="libraries\nhibernate\hibernate.cfg.xml" />
+    <Content Include="libraries\nhibernate\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="libraries\nhibernate\Iesi.Collections.dll" />
+    <Content Include="libraries\nhibernate\Iesi.Collections.license.txt" />
+    <Content Include="libraries\nhibernate\Iesi.Collections.Test.dll" />
+    <Content Include="libraries\nhibernate\Iesi.Collections.Test.dll-results.xml" />
+    <Content Include="libraries\nhibernate\Iesi.Collections.xml" />
+    <Content Include="libraries\nhibernate\log.txt" />
+    <Content Include="libraries\nhibernate\log4net.dll" />
+    <Content Include="libraries\nhibernate\log4net.license.txt" />
+    <Content Include="libraries\nhibernate\log4net.xml" />
+    <Content Include="libraries\nhibernate\Lucene.Net.dll" />
+    <Content Include="libraries\nhibernate\Lucene.Net.xml" />
+    <Content Include="libraries\nhibernate\Memcached.ClientLibrary.dll" />
+    <Content Include="libraries\nhibernate\Memcached.ClientLibrary.license.txt" />
+    <Content Include="libraries\nhibernate\nant\log4net.dll" />
+    <Content Include="libraries\nhibernate\nant\NAnt.Core.dll" />
+    <Content Include="libraries\nhibernate\nant\NAnt.Core.license.txt" />
+    <Content Include="libraries\nhibernate\nant\NAnt.Core.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.MemCache.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.MemCache.Tests.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.MemCache.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.Prevalence.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.Prevalence.Tests.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.Prevalence.Tests.dll-results.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.Prevalence.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.SysCache.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.SysCache.Tests.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.SysCache.Tests.dll-results.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.SysCache.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.SysCache2.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Caches.SysCache2.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.DomainModel.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.DomainModel.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Examples.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.JetDriver.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.JetDriver.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.license.txt" />
+    <Content Include="libraries\nhibernate\NHibernate.Mapping.Attributes.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Mapping.Attributes.Test.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Mapping.Attributes.Test.dll-results.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Mapping.Attributes.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Tasks.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Tasks.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Test.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Test.dll-results.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Test.Performance.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Tool.hbm2net.Console.exe" />
+    <Content Include="libraries\nhibernate\NHibernate.Tool.hbm2net.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Tool.hbm2net.Tests.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.Tool.hbm2net.Tests.dll-results.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.Tool.hbm2net.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.UserTypes.Oracle.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.UserTypes.Oracle.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.UserTypes.SqlTypes.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.UserTypes.SqlTypes.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.UserTypes.Tests.dll" />
+    <Content Include="libraries\nhibernate\NHibernate.UserTypes.Tests.dll-results.xml" />
+    <Content Include="libraries\nhibernate\NHibernate.xml" />
+    <Content Include="libraries\nhibernate\nmock.dll" />
+    <Content Include="libraries\nhibernate\nmock.license.txt" />
+    <Content Include="libraries\nhibernate\Nullables.dll" />
+    <Content Include="libraries\nhibernate\Nullables.NHibernate.dll" />
+    <Content Include="libraries\nhibernate\Nullables.NHibernate.xml" />
+    <Content Include="libraries\nhibernate\Nullables.Tests.dll" />
+    <Content Include="libraries\nhibernate\Nullables.Tests.dll-results.xml" />
+    <Content Include="libraries\nhibernate\Nullables.xml" />
+    <Content Include="libraries\nhibernate\nunit.core.dll" />
+    <Content Include="libraries\nhibernate\nunit.framework.dll" />
+    <Content Include="libraries\nhibernate\nunit.framework.license.txt" />
+    <Content Include="libraries\nhibernate\NVelocity.dll" />
+    <Content Include="libraries\nhibernate\NVelocity.license.txt" />
+    <Content Include="libraries\nhibernate\releasenotes.txt" />
+    <Content Include="libraries\nunit\Failure.jpg" />
+    <Content Include="libraries\nunit\fit.dll" />
+    <Content Include="libraries\nunit\Ignored.jpg" />
+    <Content Include="libraries\nunit\log4net.dll" />
+    <Content Include="libraries\nunit\mock-assembly.dll" />
+    <Content Include="libraries\nunit\nonamespace-assembly.dll" />
+    <Content Include="libraries\nunit\notestfixtures-assembly.dll" />
+    <Content Include="libraries\nunit\nunit-agent.exe" />
+    <Content Include="libraries\nunit\nunit-console-runner.dll" />
+    <Content Include="libraries\nunit\nunit-console-x86.exe" />
+    <Content Include="libraries\nunit\nunit-console.exe" />
+    <Content Include="libraries\nunit\nunit-console.tests.dll" />
+    <Content Include="libraries\nunit\nunit-gui-runner.dll" />
+    <Content Include="libraries\nunit\nunit-gui.tests.dll" />
+    <Content Include="libraries\nunit\nunit-x86.exe" />
+    <Content Include="libraries\nunit\nunit.core.dll" />
+    <Content Include="libraries\nunit\nunit.core.extensions.dll" />
+    <Content Include="libraries\nunit\nunit.core.interfaces.dll" />
+    <Content Include="libraries\nunit\nunit.core.tests.dll" />
+    <Content Include="libraries\nunit\nunit.exe" />
+    <Content Include="libraries\nunit\nunit.extensions.tests.dll" />
+    <Content Include="libraries\nunit\nunit.fixtures.dll" />
+    <Content Include="libraries\nunit\nunit.fixtures.tests.dll" />
+    <Content Include="libraries\nunit\nunit.framework.dll" />
+    <Content Include="libraries\nunit\nunit.framework.extensions.dll" />
+    <Content Include="libraries\nunit\nunit.framework.tests.dll" />
+    <Content Include="libraries\nunit\nunit.framework.xml" />
+    <Content Include="libraries\nunit\nunit.mocks.dll" />
+    <Content Include="libraries\nunit\nunit.mocks.tests.dll" />
+    <Content Include="libraries\nunit\nunit.uikit.dll" />
+    <Content Include="libraries\nunit\nunit.uikit.tests.dll" />
+    <Content Include="libraries\nunit\nunit.util.dll" />
+    <Content Include="libraries\nunit\nunit.util.tests.dll" />
+    <Content Include="libraries\nunit\NUnitFitTests.html" />
+    <Content Include="libraries\nunit\runFile.exe" />
+    <Content Include="libraries\nunit\Success.jpg" />
+    <Content Include="libraries\nunit\test-assembly.dll" />
+    <Content Include="libraries\nunit\test-utilities.dll" />
+    <Content Include="libraries\nunit\timing-tests.dll" />
+    <Content Include="libraries\rhinomocks\Rhino.Mocks.dll" />
+    <Content Include="tools\SQL Compare 7\ActiproSoftware.Shared.Net20.dll" />
+    <Content Include="tools\SQL Compare 7\ActiproSoftware.UIStudio.Dock.Net20.dll" />
+    <Content Include="tools\SQL Compare 7\ActiproSoftware.WinUICore.Net20.dll" />
+    <Content Include="tools\SQL Compare 7\ActiproSoftware.Wizard.Net20.dll" />
+    <Content Include="tools\SQL Compare 7\DevExpress.Data.v7.2.dll" />
+    <Content Include="tools\SQL Compare 7\DevExpress.Utils.v7.2.dll" />
+    <Content Include="tools\SQL Compare 7\DevExpress.XtraBars.v7.2.dll" />
+    <Content Include="tools\SQL Compare 7\DevExpress.XtraEditors.v7.2.dll" />
+    <Content Include="tools\SQL Compare 7\DevExpress.XtraGrid.v7.2.dll" />
+    <Content Include="tools\SQL Compare 7\DevExpress.XtraPrinting.v7.2.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.BackupReader.CryptoHelper.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.BackupReader.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.BackupReader.SqbReader.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.Licensing.Client.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.Shared.Controls.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.Shared.Controls.SQL.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.Shared.SQL.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.Shared.SQL.xml" />
+    <Content Include="tools\SQL Compare 7\RedGate.Shared.Utils.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.Shared.Utils.xml" />
+    <Content Include="tools\SQL Compare 7\RedGate.SqlChangeset.Common.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.SQLCompare.ASTParser.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.SQLCompare.CommandLine.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.SQLCompare.Distribution.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.SQLCompare.Engine.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.SQLCompare.Engine.xml" />
+    <Content Include="tools\SQL Compare 7\RedGate.SQLCompare.Rewriter.dll" />
+    <Content Include="tools\SQL Compare 7\RedGate.SQLCompare.UI.exe" />
+    <Content Include="tools\SQL Compare 7\RedGate.Update.Client.dll" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Assemblies.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\AsymmetricKeys.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\bwgradient.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Certificates.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Contract32.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Contracts.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\DdlTriggers.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Defaults.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\drop.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Equals.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\EventNotifications.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Expand32.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\FullTextCatalogs.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Indexes.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\LeftArrow16.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\LeftArrow48.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\LeftArrow48.png" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\LeftDatabase32.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\MessageTypes.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\NotEquals16.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\PartitionFunctions.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\PartitionSchemes.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Queues.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\RightArrow16.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\RightArrow16.png" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\RightArrow48.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\RightDatabase32.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Roles.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Routes.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Rules.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Schemas.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\ServiceBindings.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Services.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\StoredProcedures.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\SymmetricKeys.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Synonyms.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\tables.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\UserDefinedFunctions.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\UserDefinedTypes.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Users.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\Views.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\wbgrad.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\wggrad.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\wggradient.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\wpgradient.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\wrgradient.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\XmlSchemaCollections.gif" />
+    <Content Include="tools\SQL Compare 7\Reporting\images\YukonDefault.gif" />
+    <Content Include="tools\SQL Compare 7\SQL Changeset\RedGate.SqlChangeset.Common.dll" />
+    <Content Include="tools\SQL Compare 7\SQL Changeset\RedGate.SqlChangeset.exe" />
+    <Content Include="tools\SQL Compare 7\SQL Changeset\RedGate.SqlChangeset.Shared.dll" />
+    <Content Include="tools\SQL Compare 7\SQL Changeset\RedGate.SqlChangeset.SharedUi.dll" />
+    <Content Include="tools\SQL Compare 7\SQLCompare.exe" />
+    <Content Include="tools\SQL Compare 7\SQLCompareExcel.xsl" />
+    <Content Include="tools\SQL Compare 7\SQLCompareInteractiveReportTemplate.xsl" />
+    <Content Include="tools\SQL Compare 7\SQLCompareSimpleHTMLReport.xsl" />
+    <Content Include="tools\SQL Compare 7\System.Data.SQLite.DLL" />
+    <Content Include="tools\SQL Compare 7\x64\System.Data.SQLite.DLL" />
+    <Content Include="tools\SQL Compare 7\zlib1.dll" />
+    <Content Include="libraries\structuremap\NAnt.Core.dll" />
+    <Content Include="libraries\structuremap\Rhino.Mocks.dll" />
+    <Content Include="libraries\structuremap\StructureMap.AutoMocking.dll" />
+    <Content Include="libraries\structuremap\StructureMap.Client.dll" />
+    <Content Include="libraries\structuremap\StructureMap.DataAccess.dll" />
+    <Content Include="libraries\structuremap\StructureMap.DeploymentTasks.dll" />
+    <Content Include="libraries\structuremap\StructureMap.dll" />
+    <Content Include="libraries\structuremap\StructureMapDoctor.exe" />
+    <Content Include="tools\subversion\intl3_svn.dll" />
+    <Content Include="tools\subversion\libapr-1.dll" />
+    <Content Include="tools\subversion\libapr.dll" />
+    <Content Include="tools\subversion\libapriconv-1.dll" />
+    <Content Include="tools\subversion\libapriconv.dll" />
+    <Content Include="tools\subversion\libaprutil-1.dll" />
+    <Content Include="tools\subversion\libaprutil.dll" />
+    <Content Include="tools\subversion\libdb41.dll" />
+    <Content Include="tools\subversion\libdb44.dll" />
+    <Content Include="tools\subversion\libeay32.dll" />
+    <Content Include="tools\subversion\libhttpd.dll" />
+    <Content Include="tools\subversion\libsasl.dll" />
+    <Content Include="tools\subversion\libsvnjavahl-1.dll" />
+    <Content Include="tools\subversion\libsvn_client-1.dll" />
+    <Content Include="tools\subversion\libsvn_delta-1.dll" />
+    <Content Include="tools\subversion\libsvn_diff-1.dll" />
+    <Content Include="tools\subversion\libsvn_fs-1.dll" />
+    <Content Include="tools\subversion\libsvn_ra-1.dll" />
+    <Content Include="tools\subversion\libsvn_repos-1.dll" />
+    <Content Include="tools\subversion\libsvn_subr-1.dll" />
+    <Content Include="tools\subversion\libsvn_wc-1.dll" />
+    <Content Include="tools\subversion\openssl.exe" />
+    <Content Include="tools\subversion\saslANONYMOUS.dll" />
+    <Content Include="tools\subversion\saslCRAMMD5.dll" />
+    <Content Include="tools\subversion\sasldblistusers2.exe" />
+    <Content Include="tools\subversion\saslDIGESTMD5.dll" />
+    <Content Include="tools\subversion\saslNTLM.dll" />
+    <Content Include="tools\subversion\saslpasswd2.exe" />
+    <Content Include="tools\subversion\saslSASLDB.dll" />
+    <Content Include="tools\subversion\ssleay32.dll" />
+    <Content Include="tools\subversion\svn-populate-node-origins-index.exe" />
+    <Content Include="tools\subversion\svn.exe" />
+    <Content Include="tools\subversion\svnadmin.exe" />
+    <Content Include="tools\subversion\svndumpfilter.exe" />
+    <Content Include="tools\subversion\svnlook.exe" />
+    <Content Include="tools\subversion\svnserve.exe" />
+    <Content Include="tools\subversion\svnsync.exe" />
+    <Content Include="tools\subversion\svnversion.exe" />
+    <Content Include="tools\subversion\uninst.exe" />
+    <Content Include="tools\tools\Dbgview.exe" />
+    <Content Include="tools\tools\Filemon.exe" />
+    <Content Include="tools\tools\procexp.exe" />
+    <Content Include="tools\tools\Regmon.exe" />
+    <Content Include="tools\tools\Tail.exe" />
+    <Content Include="libraries\watin\Interop.SHDocVw.dll" />
+    <Content Include="libraries\watin\Microsoft.mshtml.dll" />
+    <Content Include="libraries\watin\WatiN.Core.dll" />
+    <Content Include="libraries\watin\WatiN.Core.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Build\build.bat" />
+    <None Include="Build\ccnet.config" />
+    <None Include="Build\clicktobuild.bat" />
+    <None Include="Build\common.build" />
+    <None Include="Build\nant.build" />
+    <None Include="Deploy\clicktodeploylocal.bat" />
+    <None Include="Deploy\deploy.build" />
+    <None Include="Deploy\deploylocal.bat" />
+    <None Include="tools\nant\NAnt.exe.config" />
+    <None Include="tools\nant\nant.xsd" />
+    <None Include="libraries\nhibernate\log4net.xsd" />
+    <None Include="libraries\nhibernate\nhibernate-configuration.xsd" />
+    <None Include="libraries\nhibernate\nhibernate-mapping.xsd" />
+    <None Include="libraries\nhibernate\NHibernate.Caches.MemCache.Tests.dll.config" />
+    <None Include="libraries\nhibernate\NHibernate.Caches.Prevalence.Tests.dll.config" />
+    <None Include="libraries\nhibernate\NHibernate.Caches.SysCache.Tests.dll.config" />
+    <None Include="libraries\nhibernate\NHibernate.Examples.dll.config" />
+    <None Include="libraries\nhibernate\NHibernate.Test.dll.config" />
+    <None Include="libraries\nhibernate\NHibernate.Test.Performance.dll.config" />
+    <None Include="libraries\nhibernate\NHibernate.Tool.hbm2net.Tests.dll.config" />
+    <None Include="libraries\nhibernate\NHibernate.UserTypes.Tests.dll.config" />
+    <None Include="libraries\nhibernate\Nullables.Tests.dll.config" />
+    <None Include="libraries\nunit\clr.bat" />
+    <None Include="libraries\nunit\nunit-agent.exe.config" />
+    <None Include="libraries\nunit\nunit-console-x86.exe.config" />
+    <None Include="libraries\nunit\nunit-console.exe.config" />
+    <None Include="libraries\nunit\nunit-x86.exe.config" />
+    <None Include="libraries\nunit\nunit.exe.config" />
+    <None Include="libraries\nunit\NUnitTests.config" />
+    <None Include="libraries\nunit\NUnitTests.nunit" />
+    <None Include="libraries\nunit\runFile.exe.config" />
+    <None Include="tools\SQL Compare 7\RedGate.SQLCompare.Distribution.mod" />
+    <None Include="tools\SQL Compare 7\RedGate.SQLCompare.UI.exe.config" />
+    <None Include="tools\SQL Compare 7\RedGate.SQLCompare.UI.exe.manifest" />
+    <None Include="tools\SQL Compare 7\SQLCompare.exe.config" />
+    <None Include="tools\subversion\license\APR_and_Serf.license" />
+    <None Include="tools\subversion\license\CyrusSASL.license" />
+    <None Include="tools\subversion\license\Neon.license" />
+    <None Include="tools\subversion\license\OpenSSL.license" />
+    <None Include="tools\subversion\license\Subversion.license" />
+    <None Include="tools\subversion\ssleay32.dll.tmp" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PreBuildEvent>COPY "$(ProjectDir)BUILD\*.BUILD" ..\..\..\
+COPY "$(ProjectDir)BUILD\*.BAT" ..\..\..\
+</PreBuildEvent>
+  </PropertyGroup>
+</Project>

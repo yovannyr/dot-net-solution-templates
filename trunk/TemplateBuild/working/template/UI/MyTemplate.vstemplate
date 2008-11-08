@@ -1,0 +1,85 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>UI</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>UI</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.UI.csproj" File="UI.csproj" ReplaceParameters="true">
+      <Folder Name="App_Data" TargetFolderName="App_Data" />
+      <Folder Name="Content" TargetFolderName="Content">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Site.css">Site.css</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AccountController.cs">AccountController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx">Default.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx.cs">Default.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <Folder Name="Models" TargetFolderName="Models" />
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Scripts" TargetFolderName="Scripts">
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.2.6.js">jquery-1.2.6.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.2.6.min.js">jquery-1.2.6.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MicrosoftAjax.debug.js">MicrosoftAjax.debug.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MicrosoftAjax.js">MicrosoftAjax.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MicrosoftMvcAjax.debug.js">MicrosoftMvcAjax.debug.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MicrosoftMvcAjax.js">MicrosoftMvcAjax.js</ProjectItem>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <Folder Name="Account" TargetFolderName="Account">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ChangePassword.aspx">ChangePassword.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ChangePassword.aspx.cs">ChangePassword.aspx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ChangePassword.aspx.designer.cs">ChangePassword.aspx.designer.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ChangePasswordSuccess.aspx">ChangePasswordSuccess.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ChangePasswordSuccess.aspx.cs">ChangePasswordSuccess.aspx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ChangePasswordSuccess.aspx.designer.cs">ChangePasswordSuccess.aspx.designer.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Login.aspx">Login.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Login.aspx.cs">Login.aspx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Login.aspx.designer.cs">Login.aspx.designer.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Register.aspx">Register.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Register.aspx.cs">Register.aspx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Register.aspx.designer.cs">Register.aspx.designer.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Home" TargetFolderName="Home">
+          <ProjectItem ReplaceParameters="true" TargetFileName="About.aspx">About.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="About.aspx.cs">About.aspx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="About.aspx.designer.cs">About.aspx.designer.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.aspx">Index.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.aspx.cs">Index.aspx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.aspx.designer.cs">Index.aspx.designer.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Shared" TargetFolderName="Shared">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Error.aspx">Error.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Error.aspx.cs">Error.aspx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Error.aspx.designer.cs">Error.aspx.designer.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LoginUserControl.ascx">LoginUserControl.ascx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LoginUserControl.ascx.cs">LoginUserControl.ascx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LoginUserControl.ascx.designer.cs">LoginUserControl.ascx.designer.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Site.Master">Site.Master</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Site.Master.cs">Site.Master.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Site.Master.designer.cs">Site.Master.designer.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>LOBTemplateWizard, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2279e39cfc7c91b2</Assembly>
+    <FullClassName>LOBTemplateWizard.SolutionWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
