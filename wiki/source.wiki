@@ -1,3 +1,8 @@
-#get the latest source code here
+This is an open source project..  So you can browse and change the code as you wish!!
 
-= Introduction =
+
+To access the code use a subversion client to pull down the latest trunk.  Located here: http://dot-net-solution-templates.googlecode.com/svn/trunk/
+
+
+To browse the source online go to the [http://code.google.com/p/dot-net-solution-templates/source/browse/trunk Source]
+
