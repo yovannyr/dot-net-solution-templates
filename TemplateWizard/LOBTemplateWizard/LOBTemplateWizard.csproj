@@ -11,8 +11,9 @@
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>LOBTemplateWizard</AssemblyName>
     <RootNamespace>LOBTemplateWizard</RootNamespace>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>strongname.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -123,9 +124,6 @@
       <Link>LOBTemplateWizard - For Testing.AddIn</Link>
     </Content>
     <Content Include="LOBTemplateWizard.AddIn" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="strongname.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <PropertyGroup>
