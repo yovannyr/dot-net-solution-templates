@@ -2,7 +2,7 @@ This is an open source project..  So you can browse and change the code as you w
 
 ----
 
-To access the code use a subversion client to pull down the latest trunk.  Located here: http://dot-net-solution-templates.googlecode.com/svn/trunk/
+To access the code, use a subversion client to pull down the latest trunk.  Which is located here: http://dot-net-solution-templates.googlecode.com/svn/trunk/
 
 Use a client like [http://tortoisesvn.tigris.org/ Tortoise]
 
