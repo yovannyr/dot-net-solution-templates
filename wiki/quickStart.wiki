@@ -1,13 +1,4 @@
-#summary One-sentence summary of this page.
+#Quick Start will guide you through installing and creating a new project using a solution template from this project.
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  # Install the Wizard Extension Installer
+  # Download and Install the Solution Template
