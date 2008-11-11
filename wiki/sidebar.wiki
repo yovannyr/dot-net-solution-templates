@@ -1,4 +1,4 @@
-  * [quickStart Quick Start]
+  * [QuickStart Quick Start]
   * [Faqs FAQs]
   * [downloads Downloads]
   * [source Source Code]
