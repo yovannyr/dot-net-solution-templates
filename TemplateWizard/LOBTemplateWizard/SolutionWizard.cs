@@ -20,7 +20,8 @@ namespace LOBTemplateWizard
         private static string _solutionName = string.Empty;
         private Project _project;
         private DTE _visualStudio;
-
+        private readonly TokenNameDictionaryReplacer _solutionNameDictionaryReplacer= new TokenNameDictionaryReplacer();
+        private readonly ProjectOutputFixer projectOutputFixer= new ProjectOutputFixer();
         public void BeforeOpeningFile(ProjectItem projectItem)
         {
         }
@@ -29,19 +30,7 @@ namespace LOBTemplateWizard
         {
             _project = project;
             if (project != null)
-                RenameProjectOutputAssemblyName(project, SAFE_SOLUTION_NAME_KEY, _safeSolutionName);
-        }
-
-        public static void RenameProjectOutputAssemblyName(Project project, string variableName, string variableValue)
-        {
-            if (project != null && _projectCount > 1 && project.Name.Contains(variableName))
-            {
-                project.Name = project.Name.Replace(variableName, variableValue);
-                project.Properties.Item("AssemblyName").Value =
-                    project.Properties.Item("AssemblyName").Value.ToString().Replace(variableName,
-                                                                                     variableValue);
-                project.Save(project.FileName);
-            }
+                projectOutputFixer.RenameProjectOutputAssemblyName(project, SAFE_SOLUTION_NAME_KEY, _safeSolutionName);
         }
 
         public void ProjectItemFinishedGenerating(ProjectItem projectItem)
@@ -53,16 +42,12 @@ namespace LOBTemplateWizard
             _projectCount--;
             if (_projectCount == 0)
             {                
-
                 MoveSolutionFile(_visualStudio);
 
                 string projectDir = Path.GetDirectoryName(GetSolutionFilePath(_visualStudio));
                 CopyFolder( Path.Combine( projectDir , "..\\LibrariesAndTools\\Build"),Path.Combine( projectDir , "..\\"));
 
                 DisableProjectFromBuild("LibrariesAndTools");
-
-                
-                
             }
             else
             {
@@ -122,18 +107,8 @@ namespace LOBTemplateWizard
                         _safeSolutionName = replacementsDictionary["$safeprojectname$"];
                     }
                 }
-
-                replacementsDictionary.Add(SOLUTION_NAME_KEY, _solutionName);
-                replacementsDictionary.Add(SAFE_SOLUTION_NAME_KEY, _safeSolutionName);
-
-                replacementsDictionary["$projectname$"] =
-                    replacementsDictionary["$projectname$"].Replace(SOLUTION_NAME_KEY, _solutionName);
-                
-                replacementsDictionary["$projectname$"] =
-                    replacementsDictionary["$projectname$"].Replace(SAFE_SOLUTION_NAME_KEY, _safeSolutionName);
-                
-                replacementsDictionary["$safeprojectname$"] =
-                    replacementsDictionary["$safeprojectname$"].Replace(SAFE_SOLUTION_NAME_KEY, _safeSolutionName);
+                this._solutionNameDictionaryReplacer.ReplaceTokensInTheDictionary(replacementsDictionary,SOLUTION_NAME_KEY, _solutionName);
+                this._solutionNameDictionaryReplacer.ReplaceTokensInTheDictionary(replacementsDictionary, SAFE_SOLUTION_NAME_KEY, _safeSolutionName);
             }
             catch (Exception ex)
             {
@@ -230,6 +205,33 @@ namespace LOBTemplateWizard
                 string name = Path.GetFileName(folder);
                 string dest = Path.Combine(destFolder, name);
                 CopyFolder(folder, dest);
+            }
+        }
+    }
+
+    public class ProjectOutputFixer
+    {
+        public void RenameProjectOutputAssemblyName(Project project, string variableName, string variableValue)
+        {
+            if (project != null && project.Name.Contains(variableName))
+            {
+                project.Name = project.Name.Replace(variableName, variableValue);
+                project.Properties.Item("AssemblyName").Value =
+                    project.Properties.Item("AssemblyName").Value.ToString().Replace(variableName,
+                                                                                     variableValue);
+                project.Save(project.FileName);
+            }            
+        }
+    }
+
+
+    public class TokenNameDictionaryReplacer
+    {
+        public void ReplaceTokensInTheDictionary(Dictionary<string, string> dictionary, string key, string name)
+        {
+            foreach (KeyValuePair<string, string> pair in dictionary)
+            {
+                pair.Value.Replace(key, name);
             }
         }
     }
