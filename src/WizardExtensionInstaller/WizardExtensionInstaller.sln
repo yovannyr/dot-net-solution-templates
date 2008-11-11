@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardExtension", "WizardExtensionInstaller\WizardExtension.csproj", "{97437744-AAF1-4136-9CD8-B7A827841FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardExtension.UnitTests", "WizardExtension.UnitTests\WizardExtension.UnitTests.csproj", "{7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WizardExtension.Installer", "Installer\Installer.vdproj", "{4612E960-65D4-4DA8-B089-A0D19DE76E2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97437744-AAF1-4136-9CD8-B7A827841FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97437744-AAF1-4136-9CD8-B7A827841FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97437744-AAF1-4136-9CD8-B7A827841FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97437744-AAF1-4136-9CD8-B7A827841FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3AE221-1ECF-4155-A0C8-D4D3F9C30C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4612E960-65D4-4DA8-B089-A0D19DE76E2F}.Debug|Any CPU.ActiveCfg = Debug
+		{4612E960-65D4-4DA8-B089-A0D19DE76E2F}.Debug|Any CPU.Build.0 = Debug
+		{4612E960-65D4-4DA8-B089-A0D19DE76E2F}.Release|Any CPU.ActiveCfg = Release
+		{4612E960-65D4-4DA8-B089-A0D19DE76E2F}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
