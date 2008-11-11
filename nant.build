@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXTERNAL_PROPERTIES: usdDatabaseVersion--> 
+<!--EXTERNAL_PROPERTIES: CCNetLabel-->
+<project name="dot-net-solution-templates" xmlns="http://nant.sf.net/schemas/nant.xsd">
+	<include buildfile="common.build"/>
+	<property name="nant.settings.currentframework" value="net-3.5" />
+	<property name="company.name" value=""/>
+
+	<!-- Version settings -->
+	<property name="svn.executable" value="" dynamic="true" if="${not property::exists('svn.executable')}" />
+	<property name="revisionnumber" value="9999" dynamic="true"/>
+	<property name="project.fullversion" value="1.0.${revisionnumber}.0" dynamic="true"/>
+	<property name="project.config" value="release"/>
+
+	<!-- Folder references -->
+	<property name="dir.solution" value="src\WizardExtensionInstaller"/>
+	<property name="dir.build" value="build" dynamic="true"/>
+	<property name="dir.test" value="${dir.build}\${nant.settings.currentframework}-${project.config}"/>
+	<property name="dir.package" value="${dir.build}/package"/>
+	<property name="dir.results" value="${dir.build}/results"/>
+	<property name="dir.installerpackage" value="latestVersion" />
+
+	<!-- Compilation settings -->
+	<property name="file.solution" value="${dir.solution}/WizardExtensionInstaller.sln"/>
+
+	<!-- Database migration settings -->
+	<property name="database.script.directory" value="${dir.solution}/Infrastructure/Database" />
+	<property name="database.server" value="localhost\sqlexpress" overwrite="false"/>
+	<property name="database.name" value="${project::get-name()}" overwrite="false"/>
+	<property name="database.integrated" value="true" overwrite="false" />
+<!--	<property name="database.username" value="dbuser" overwrite="false"/>-->
+<!--	<property name="database.password" value="P@ssword1" overwrite="false"/>-->
+
+	<!-- Testing settings -->
+	<property name="assembly.unittests" value="WizardExtension.UnitTests.dll"/>
+	<property name="assembly.integrationtests" value=""/>
+
+	<!-- Common targets -->
+	<target name="build" depends="version, init, commonassemblyinfo, 
+			compile, move-for-test, test"/>
+
+  <target name="build-and-package" depends="build, package"/>
+   
+	<!-- Targets -->
+	<target name="version">
+		<if test="${property::exists('CCNetLabel')}">
+			<property name="project.revision" value="${CCNetLabel}"/>
+		</if>
+	</target>
+
+	<target name="move-for-test">
+		<copy todir="${dir.test}" flatten="true">
+			<fileset basedir="${dir.solution}">
+				<include name="/**/bin/${project.config}/**" />
+				<include name="/**/UI/bin/**" />
+				<include name="*.config"/>
+				<include name="*.cfg.xml"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="test">
+		<delete dir="${dir.results}" if="${directory::exists('${results.dir}')}" />
+		<mkdir dir="${dir.results}"/>
+		<nunit2 failonerror="true" verbose="true">
+			<formatter type="Xml" outputdir="${dir.results}" usefile="true" extension=".xml"/>
+			<formatter type="Plain" />
+			<test assemblyname="${dir.test}/${assembly.unittests}"/>
+		</nunit2>
+	</target>
+
+  <target name="package">
+		<copy todir="${dir.package}\website" includeemptydirs="false">
+			<fileset basedir="${dir.solution}\ui">
+				<exclude name="**\*.cs*"/>
+				<include  name="**\**"/>
+			</fileset>
+		</copy>
+		<copy todir="${dir.package}\database" includeemptydirs="false">
+			<fileset basedir="${database.script.directory}">
+				<include name="**/*.sql" />
+			</fileset>
+		</copy>
+		<copy todir="${dir.package}\nant" includeemptydirs="false">
+			<fileset basedir="${nant::get-base-directory()}">
+				<include name="**" />
+			</fileset>
+		</copy>
+		<copy file="nant.build" todir="${dir.package}"/>
+		<copy todir="${dir.package}">
+			<fileset basedir="config\">
+				<include name="**" />
+			</fileset>
+		</copy>
+
+		<xmlpoke
+			file="${dir.package}\website\Web.config"
+			xpath="/configuration/system.web/trace/@enabled"
+			value="false" />
+
+		<delete file="${dir.package}/${project::get-name()}Package.zip" />
+		<zip zipfile="${dir.package}/${project::get-name()}Package.zip">
+			<fileset basedir="${dir.package}">
+				<include name="**" />
+			</fileset>
+		</zip>
+	</target>
+
+  <target name="executedeploy">
+    <exec program="deploylocal.bat" basedir="${dir.package}"
+			  workingdir="${dir.package}" />
+  </target>
+</project>
