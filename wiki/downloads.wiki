@@ -9,5 +9,3 @@
 
 == Visual Studio Wizard Extension Installer ==
   * [http://dot-net-solution-templates.googlecode.com/files/TemplateWizardExtensionInstaller.msi Wizard Extension Installer Version 1]
-
-<wiki:toc max_depth="1" />
