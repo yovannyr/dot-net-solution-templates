@@ -1,13 +1,7 @@
-#summary One-sentence summary of this page.
+#summary Installer downloads of Visual Studio Solution Templates
 
-= Introduction =
-
-Add your content here.
+= Solution Templates =
 
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Visual Studio Wizard Extension Installer =
