@@ -2,7 +2,7 @@
 
 ==Project Downloads==
   == Solution Templates ==
-    * ==== Line of Business Templates ^[1]^ ==== 
+    ==== Line of Business Templates ^[1]^ ==== 
       * [http://dot-net-solution-templates.googlecode.com/files/LineOfBusinessWebAppTemplate.vsi Web Application Version 1]
 
 
