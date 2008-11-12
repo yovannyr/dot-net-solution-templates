@@ -3,5 +3,6 @@
 = Solution Templates =
 
 
-
 = Visual Studio Wizard Extension Installer =
+
+[http://dot-net-solution-templates.googlecode.com/files/TemplateWizardExtensionInstaller.msi Wizard Extension Installer]
