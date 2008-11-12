@@ -1,8 +1,10 @@
 #summary Installer downloads of Visual Studio Solution Templates
 
 = Solution Templates =
+  # Line of Business Templates
+[http://dot-net-solution-templates.googlecode.com/files/LineOfBusinessWebAppTemplate.vsi Web Application v1]
 
 
 = Visual Studio Wizard Extension Installer =
 
-[http://dot-net-solution-templates.googlecode.com/files/TemplateWizardExtensionInstaller.msi Wizard Extension Installer]
+[http://dot-net-solution-templates.googlecode.com/files/TemplateWizardExtensionInstaller.msi Wizard Extension Installer Version 1]
