@@ -2,7 +2,7 @@
 
 = Solution Templates =
   # Line of Business Templates
-[http://dot-net-solution-templates.googlecode.com/files/LineOfBusinessWebAppTemplate.vsi Web Application v1]
+[http://dot-net-solution-templates.googlecode.com/files/LineOfBusinessWebAppTemplate.vsi Web Application Version 1]
 
 
 = Visual Studio Wizard Extension Installer =
