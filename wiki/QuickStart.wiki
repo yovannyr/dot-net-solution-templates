@@ -1,9 +1,3 @@
-#summary Quick Start will guide you through installing and creating a new project using a solution template from this project.
- * Download and Install the _VS Wizard Extension Installer_ [http://dot-net-solution-templates.googlecode.com/files/TemplateWizardExtensionInstaller.msi Download Here]
- * Download and Install a Solution Template [http://dot-net-solution-templates.googlecode.com/files/LineOfBusinessWebAppTemplate.vsi Download Here]
- * In Visual Studio goto File --> New Project.
- * Select the template under C# --> Line of Business --> Web Application
- * Wait for the template to finish loading.
- * Build the project in visual studio
- * Build the project using the ClickToBuild.bat file located in the Solution Root Folder
- * Start Developing
+#summary Quick Start will guide you through installing and creating a new project using a
+
+[http://dot-net-solution-templates.googlecode.com/files/dot-net-solution-template.pdf Download the Quick Start (pdf)]
