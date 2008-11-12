@@ -1,5 +1,4 @@
-_Quick Start will guide you through installing and creating a new project using a solution template from this project._
+#summary _Quick Start will guide you through installing and creating a new project using a solution template from this project._
 
   # Install the Wizard Extension Installer [http://dot-net-solution-templates.googlecode.com/files/TemplateWizardExtensionInstaller.msi Download Here]
   # Download and Install the Solution Template [http://dot-net-solution-templates.googlecode.com/files/LineOfBusinessWebAppTemplate.vsi Download Here]
-
