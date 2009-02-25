@@ -20,7 +20,7 @@
       </ProjectTemplateLink>
 	    <SolutionFolder Name="src">
       		<ProjectTemplateLink ProjectName="$safesolutionname$.UI">
-        		UI\MyTemplate.vstemplate
+        		UI\UI.vstemplate
 		      </ProjectTemplateLink>
       		<ProjectTemplateLink ProjectName="$safesolutionname$.UnitTests">
         		UnitTest\MyTemplate.vstemplate
