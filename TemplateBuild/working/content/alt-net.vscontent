@@ -13,6 +13,7 @@
       <Attribute name="ProjectSubType" value="Line of Business"></Attribute>
     </Attributes>
   </Content>
+<!--
   <Content>
     <FileName>LobTemplateWizard.dll</FileName>
     <DisplayName>Solution Template Wizard</DisplayName>
@@ -20,4 +21,5 @@
     <FileContentType>WizardExtension</FileContentType>
     <ContentVersion>2.0</ContentVersion>
   </Content>
+-->
 </VSContent>
