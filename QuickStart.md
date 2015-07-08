@@ -1,0 +1,1 @@
+[Download the Quick Start (pdf)](http://dot-net-solution-templates.googlecode.com/files/dot-net-solution-template.pdf)
